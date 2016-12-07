@@ -16,7 +16,7 @@ Assuming Geant4 source code and Geant4 DB are installed on the host
 respectively under */geant4-src* and */geant4-data*
 
 ```
-$ git clone https://github.com/andreadotti/docker-geant4-dev
+$ git clone https://github.com/andreadotti/docker-geant4-dev.git
 $ cd docker-geant4-dev
 $ ./build-binaries.sh /geant4-src /geant4-data
 $ docker build -t geant4-env .
