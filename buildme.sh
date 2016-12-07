@@ -4,7 +4,6 @@ cmake -DGEANT4_INSTALL_DATA=ON \
       -DGEANT4_INSTALL_DATADIR=/usr/local/geant4/data \
       -DGEANT4_BUILD_MULTITHREADED=ON \
       -DGEANT4_USE_GDML=ON \
-#      -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_INSTALL_PREFIX=/usr/local/geant4 \
 	/geant4-src
 make -j24 
