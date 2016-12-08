@@ -32,4 +32,22 @@ $ docker run --rm -t -i -v "/geant4-data:/usr/local/geant4/data:ro" \
 	geant4-env geant4-config --version
 ```  
 
+To add to the container your application:
+```
+$ docker run -t -i -v "/geant4-data:/usr/local/geant4/data:ro" geant4-env
+root@....:/# #Get your project somehow, e.g. apt install git && git clone ...
+root@....:/# mkdir build && cd build
+root@....:/# cmake -DGeant4_DIR=/usr/local/geant4/lib/Geant4-* <app-src>
+root@....:/# make -j`nproc`
+root@....:/# #Test your application
+root@....:/# exit
+$ docker ps -l
+#Get the ID
+$ docker commit -m"Adding my application and Geant4 ver x.y.z" -a "MyName" ID repo/name:tag
+```
 
+Containers with pre-built Geant4 images are available at <https://hub.docker.com/r/andreadotti/geant4-dev/>:
+```
+docker pull andreadotti/geant4-dev:version
+```
+ 
