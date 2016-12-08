@@ -1,4 +1,4 @@
-FROM andreadotti/geant4-dev-base
+FROM andreadotti/geant4-base-dev
 
 MAINTAINER Andrea Dotti (adotti@slac.stanford.edu)
 RUN mkdir /usr/local/geant4
