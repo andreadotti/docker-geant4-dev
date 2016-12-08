@@ -10,6 +10,11 @@ create a docker image with the Geant4 libraries and development
 environment. The image can then be used to create containers
 that can compile and run a Geant4 application.
 
+For a descripion of the overview of the Geant4 docker images and instructions on how to build
+applications against a pre-build Geant4 image see:
+<https://github.com/andreadotti/docker-geant4>
+
+
 Usage:
 ------
 Assuming Geant4 source code and Geant4 DB are installed on the host
